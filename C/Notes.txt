@@ -1,0 +1,5 @@
+Pour exécuter des scripts C via VScode:
+
+1. Aller dans un terminal PowerShell
+2. Taper la commande gcc [RPS.c] -o [RPS.exe] (où [RPS.c] est le programme à exécuter)
+3. Taper la commande .\[RPS.exe]
