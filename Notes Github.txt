@@ -1,0 +1,5 @@
+Pour push manuellement dans GitHub (sans passer par Trae), dans le terminal git:
+
+1. git add [Python/test.py] | où [Python/test.py] correspond au fichier à push;
+2. (optionnel) git commit -m ["test: add test.py"] | Ajoute un message au push;
+3. git push -u origin main | Effectue le push
