@@ -1,0 +1,6 @@
+Commandes à taper dans PowerShell pour ouvrir Ghidra:
+
+cd Desktop/ghidra_11.4.2_PUBLIC
+.\ghidraRun.bat
+
+(Il faut être patient, ça met 30 sec à démarrer)

@@ -1,0 +1,22 @@
+Rapport d'audit de sécurité - 2025-11-28 13:45:41
+
+Réaliser par Paul H.
+
+Analyse du fichier de journalisation:
+Connexion réussie: 19
+Connexion échouée: 10
+
+Analyse des ports ouverts:
+Adresse IP:  | Port(s) ouvert(s): [{'ip': 'Adresse IP', 'ports': 'Port(s) ouvert(s)'}, {'ip': '192.168.1.1', 'ports': '22, 443'}, {'ip': '192.168.1.2', 'ports': '21, 22, 80'}, {'ip': '192.168.1.254', 'ports': '443, 3389'}, {'ip': '192.168.2.254', 'ports': '22, 443'}, {'ip': '10.0.0.1', 'ports': '80, 443'}, {'ip': '10.0.0.2', 'ports': 'N/A'}, {'ip': '', 'ports': ''}, {'ip': '', 'ports': ''}, {'ip': '', 'ports': ''}, {'ip': '', 'ports': ''}, {'ip': '', 'ports': ''}, {'ip': '', 'ports': ''}, {'ip': '', 'ports': ''}]
+Adresse IP:  | Port(s) sensible(s) ouvert(s): [{'ip': '192.168.1.1', 'ports sensibles': [22]}, {'ip': '192.168.1.2', 'ports sensibles': [21, 22]}, {'ip': '192.168.1.254', 'ports sensibles': [3389]}, {'ip': '192.168.2.254', 'ports sensibles': [22]}]
+
+Analyse des URLs:
+URL qui ont réussi: 
+https://example.com
+https://httpbin.org/status/200
+https://www.python.org
+
+URL qui ont échoué: 
+https://httpbin.org/status/404
+https://httpbin.org/status/500
+https://this-domain-does-not-exist-123456789.com

@@ -1,0 +1,3 @@
+Adresse IP de la cible: 10.4.1.113
+Liste des ports ouverts: [135, 139, 445]
+Liste des ports fermés: [22, 80]

@@ -1,0 +1,64 @@
+2025-11-26 10:35:32 Authentication failed: abc does not exist.[2025-11-26 10:42:36] User registered: admin (admin)
+[2025-11-26 10:42:36] User registered: alice (user)
+[2025-11-26 10:42:42] Authentication success: alice
+[2025-11-26 10:43:00] User registered: admin (admin)
+[2025-11-26 10:43:00] User registered: alice (user)
+[2025-11-26 10:43:06] Authentication success: alice
+[2025-11-26 10:43:23] Authentication success: admin
+[2025-11-26 10:47:30] Application closed by user.
+[2025-11-26 10:47:36] User registered: admin (admin)
+[2025-11-26 10:47:36] User registered: alice (user)
+[2025-11-26 10:47:40] Authentication failed: alice (attempt 1)
+[2025-11-26 10:47:44] Authentication failed: aps does not exist.
+[2025-11-26 10:47:49] Authentication success: alice
+[2025-11-26 10:47:52] Authentication failed: admin (attempt 1)
+[2025-11-26 10:47:58] Authentication success: admin
+[2025-11-26 10:52:06] Application closed by user.
+[2025-11-26 10:52:10] User registered: admin (admin)
+[2025-11-26 10:52:10] User registered: alice (user)
+[2025-11-26 10:52:20] Authentication success: alice
+[2025-11-26 10:52:22] Authentication failed: alice (attempt 1)
+[2025-11-26 10:52:25] Authentication failed: abc does not exist.
+[2025-11-26 10:52:29] Authentication failed: admin (attempt 1)
+[2025-11-26 10:52:33] Authentication success: admin
+[2025-11-26 10:53:15] Application closed by user.
+[2025-11-26 10:56:03] User registered: admin (admin)
+[2025-11-26 10:56:03] User registered: alice (user)
+[2025-11-26 10:56:09] Authentication failed: abc does not exist.
+[2025-11-26 10:56:11] Authentication failed: alice (attempt 1)
+[2025-11-26 10:56:13] Authentication success: alice
+[2025-11-26 10:56:18] Authentication failed: admin (attempt 1)
+[2025-11-26 10:56:26] Authentication success: alice
+[2025-11-26 10:56:32] Authentication success: admin
+[2025-11-26 10:57:38] Application closed by user.
+[2025-11-26 10:57:54] User registered: admin (admin)
+[2025-11-26 10:57:54] User registered: alice (user)
+[2025-11-26 10:58:01] Authentication success: alice
+[2025-11-26 10:58:06] Authentication success: admin
+[2025-11-26 10:59:29] Application closed by user.
+[2025-11-26 10:59:33] User registered: admin (admin)
+[2025-11-26 10:59:33] User registered: alice (user)
+[2025-11-26 10:59:40] Authentication success: admin
+[2025-11-26 11:00:23] Application closed by user.
+[2025-11-26 11:00:28] User registered: admin (admin)
+[2025-11-26 11:00:28] User registered: alice (user)
+[2025-11-26 11:00:32] Authentication success: admin
+[2025-11-26 11:01:36] Application closed by user.
+[2025-11-26 11:01:39] User registered: admin (admin)
+[2025-11-26 11:01:39] User registered: alice (user)
+[2025-11-26 11:01:42] Authentication success: admin
+[2025-11-26 11:02:34] User registered: admin (admin)
+[2025-11-26 11:02:34] User registered: alice (user)
+[2025-11-26 11:02:41] Authentication success: admin
+[2025-11-26 11:04:34] Application closed by user.
+[2025-11-26 11:04:36] User registered: admin (admin)
+[2025-11-26 11:04:36] User registered: alice (user)
+[2025-11-26 11:04:40] Authentication success: admin
+[2025-11-26 11:06:18] Application closed by user.
+[2025-11-26 11:09:03] User registered: admin (admin)
+[2025-11-26 11:09:03] User registered: alice (user)
+[2025-11-26 11:09:09] Authentication success: admin
+[2025-11-26 11:24:32] Application closed by user.
+[2025-11-26 11:33:32] User registered: admin (admin)
+[2025-11-26 11:33:32] User registered: alice (user)
+[2025-11-26 11:33:57] Authentication success: admin
