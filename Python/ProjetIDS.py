@@ -102,4 +102,3 @@ def run_demo():  # Lance la démo du moteur sur événements simulés
 
 if __name__ == '__main__':  # Point d'entrée du script
     run_demo()  # Exécute la démo si lancé directement
-
