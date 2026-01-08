@@ -128,4 +128,3 @@ def run_demo():  # Démo complète: dataset, entraînement, évaluation, sauvega
 
 if __name__ == '__main__':  # Point d’entrée
     run_demo()  # Lance la démo
-
