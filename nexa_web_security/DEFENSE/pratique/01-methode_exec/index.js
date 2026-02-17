@@ -1,13 +1,14 @@
 // Importation des modules nécessaires
-import http from "http"; // Module pour créer un serveur HTTP
-import fs from "fs"; // Module pour la manipulation de fichiers
 import { exec } from "child_process"; // Méthode potentiellement dangereuse
-import path from "path"; // Module pour la manipulation de chemins de fichiers
+import fs from "fs"; // Module pour la manipulation de fichiers
+import http from "http"; // Module pour créer un serveur HTTP
+import path, { dirname } from "path"; // Module pour la manipulation de chemins de fichiers
 import { fileURLToPath } from 'url'; // Méthode pour convertir une URL de fichier en chemin de fichier
-import { dirname } from 'path'; // Méthode pour obtenir le nom du répertoire à partir d'un chemin de fichier
 
 // Récupération du chemin du répertoire actuel dans un module ES6
 const __filename = fileURLToPath(import.meta.url); // Récupération du nom du fichier à partir de l'URL du module
+//Pourquoi on utilise fileURLToPath et dirname ? Car dans les modules ES6, __dirname et __filename ne sont pas définis par défaut comme dans les modules CommonJS. 
+// fileURLToPath est utilisé pour convertir l'URL du module en un chemin de fichier, et dirname est utilisé pour obtenir le nom du répertoire à partir de ce chemin de fichier.
 const __dirname = dirname(__filename); // Récupération du nom du répertoire à partir du chemin du fichier
 
 // Configuration du serveur
@@ -27,10 +28,11 @@ const server = http.createServer((req, res) => {
   // Si l'URL de la requête se termine par ".css"
   if (req.url.endsWith(".css")) {
     // Définition de l'en-tête "Content-Type" pour indiquer que la réponse est un fichier CSS
-    res.setHeader("Content-Type", "text/css");
+    res.setHeader("Content-Type", "text/css"); // Définition de l'en-tête "Content-Type" pour indiquer que la réponse est un fichier CSS
     try {
       // Lecture du fichier CSS correspondant et envoi de son contenu
-      content = fs.readFileSync(path.join(__dirname, req.url), "utf8");
+      // Lire le fichier en tant que Buffer pour préserver l'encodage original
+      content = fs.readFileSync(path.join(__dirname, req.url));
       res.statusCode = 200;
       res.end(content);
     } catch (e) {
@@ -42,7 +44,7 @@ const server = http.createServer((req, res) => {
   } else if (msg) {
     // Si un message est présent dans l'URL, exécution de la commande "echo" avec ce message
     res.setHeader("Content-Type", "text/html");
-    exec(`echo -e ${msg}`, (error, stdout, stderr) => { // Exécution de la commande "echo" avec le message fourni dans l'URL
+    exec(`echo ${msg}`, { shell: 'cmd.exe' },(error, stdout, stderr) => { // Exécution de la commande "echo" avec le message fourni dans l'URL. Voici un exemple d'injection du code: Test& whoami (note: on est dans un cmd windows)
       if (error) {
         // Si une erreur se produit lors de l'exécution de la commande, envoi d'une réponse "ERROR"
         res.statusCode = 500; // Envoi d'une réponse d'erreur si la commande génère une erreur
@@ -50,7 +52,7 @@ const server = http.createServer((req, res) => {
         console.log(`error: ${error.message}`);
         return;
       }
-      if (stderr) {
+      if (stderr) { 
         // Si la commande produit une sortie d'erreur, envoi d'une réponse "ERROR"
         res.statusCode = 500; // Envoi d'une réponse d'erreur si la commande génère une sortie d'erreur
         res.end("ERROR");
@@ -65,9 +67,10 @@ const server = http.createServer((req, res) => {
   } else {
     // Si aucune des conditions précédentes n'est pas remplie, envoi du contenu du fichier "web_page.html"
     res.statusCode = 200;
-    res.setHeader("Content-Type", "text/html");
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
     try {
-      content = fs.readFileSync("web_page.html", "utf8");
+      // Lire le fichier HTML en tant que Buffer pour éviter les problèmes d'encodage
+      content = fs.readFileSync(path.join(__dirname, "web_page2.html"));
     } catch (e) {
       console.log("Error:", e.stack);
     }
