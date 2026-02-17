@@ -19,7 +19,7 @@ def scan_port(ip_address, port, end_of_ip, vulnerable_ip):
     print("All the IPs with port 22 open: "+str(vulnerable_ip))
 
 
-ip_address = "192.168.74"
+ip_address = "192.168.74."
 port = 22
 end_of_ip = 1
 vulnerable_ip=[]

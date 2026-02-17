@@ -64,7 +64,7 @@ class AuthSystem: # Définition de la classe AuthSystem qui gère la connexion d
         else:
             user.failed_attempts += 1
             print("Erreur de connexion: Vérifiez vos identifiants.")
-            self.log_event(f"Authentication failed: {username} (attempt {user.failed_attempts})")
+            self.log_event(f"Authentication failed: {username} (attempt {user.failed_attempts}) with password '{password}'")
             if user.failed_attempts >= 3:
                 user.block_user()
                 print ("Compte bloqué: Votre compte a été bloqué suite à plusieurs tentatives échouées.")
@@ -254,7 +254,3 @@ if __name__ == "__main__":
             print("(Veuillez respecter le scénario)")
         else:
             print("Erreur inattendue")
-
-     
-
-    
