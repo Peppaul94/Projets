@@ -1,5 +1,5 @@
 // Importation des modules nécessaires
-import { exec } from "child_process"; // Méthode potentiellement dangereuse
+import { execFile } from "child_process"; // Méthode potentiellement dangereuse
 import fs from "fs"; // Module pour la manipulation de fichiers
 import http from "http"; // Module pour créer un serveur HTTP
 import path, { dirname } from "path"; // Module pour la manipulation de chemins de fichiers
@@ -44,7 +44,7 @@ const server = http.createServer((req, res) => {
   } else if (msg) {
     // Si un message est présent dans l'URL, exécution de la commande "echo" avec ce message
     res.setHeader("Content-Type", "text/html");
-    exec(`echo ${msg}`, { shell: 'cmd.exe' },(error, stdout, stderr) => { // Exécution de la commande "echo" avec le message fourni dans l'URL. Voici un exemple d'injection du code: Test& whoami (note: on est dans un cmd windows)
+    execFile(`echo ${msg}`, { shell: 'cmd.exe' },(error, stdout, stderr) => { // Exécution de la commande "echo" avec le message fourni dans l'URL. Voici un exemple d'injection du code: Test& whoami (note: on est dans un cmd windows)
       if (error) {
         // Si une erreur se produit lors de l'exécution de la commande, envoi d'une réponse "ERROR"
         res.statusCode = 500; // Envoi d'une réponse d'erreur si la commande génère une erreur
