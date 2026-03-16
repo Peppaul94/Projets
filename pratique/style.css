@@ -1,0 +1,48 @@
+/* Style simple pour les pages du TP CSRF */
+:root{
+  --bg: #f7f9fb;
+  --panel: #ffffff;
+  --accent: #2b7cff;
+  --muted: #6b7280;
+  --success: #16a34a;
+}
+
+html,body{
+  height:100%;
+  margin:0;
+  font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #eef3fb);
+  color:#0f172a;
+}
+
+.container{
+  max-width:900px;
+  margin:40px auto;
+  padding:24px;
+  background:var(--panel);
+  border-radius:10px;
+  box-shadow:0 6px 20px rgba(11,22,40,0.06);
+}
+
+h1{font-size:1.6rem;margin:0 0 12px}
+h2{font-size:1.25rem;margin:18px 0 10px}
+
+form{margin-top:12px}
+label{display:block;margin:6px 0;color:var(--muted)}
+input[type=text], input[type=hidden], select, textarea{
+  width:100%;box-sizing:border-box;padding:10px;border:1px solid #e6eefb;border-radius:6px;background:#fbfdff
+}
+
+button, .btn{
+  display:inline-block;padding:8px 14px;background:var(--accent);color:#fff;border:none;border-radius:6px;cursor:pointer;text-decoration:none
+}
+
+.muted{color:var(--muted);font-size:0.95rem}
+
+pre, code, kbd{background:#0f172a;color:#fff;padding:6px 8px;border-radius:6px;font-family:Menlo,monospace}
+
+.note{background:#f0f9f4;border-left:4px solid var(--success);padding:10px;margin:12px 0;border-radius:6px}
+
+a{color:var(--accent)}
+
+footer{margin-top:18px;color:var(--muted);font-size:0.9rem}

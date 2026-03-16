@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600">
+  <rect width="100%" height="100%" fill="#fff5f7"/>
+  <rect x="40" y="40" width="920" height="520" rx="8" fill="#ffffff" stroke="#f6d0da"/>
+  <text x="70" y="90" font-family="Arial" font-size="20" fill="#9a1f40">/perform-action-protected — Réponse 403</text>
+  <rect x="70" y="120" width="860" height="120" fill="#fdecea" stroke="#f8c6cf"/>
+  <text x="90" y="160" font-family="Courier New" font-size="14" fill="#333">Response: 403 Forbidden - CSRF token missing or invalid</text>
+  <text x="70" y="260" font-family="Arial" font-size="14" fill="#333">Interprétation: la vérification du token a empêché l'exécution de l'action.</text>
+</svg>

